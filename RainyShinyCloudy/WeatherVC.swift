@@ -8,8 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class WeatherVC: UIViewController {
 
+    @IBOutlet weak var vwMainView: UIView!
+    @IBOutlet weak var lblDate: UILabel!
+    @IBOutlet weak var lblTemperature: UILabel!
+    @IBOutlet weak var lblLocation: UILabel!
+    @IBOutlet weak var imgWeatherIcon: UIImageView!
+    @IBOutlet weak var lblWeatherType: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5B5250EB1EC0D18C0026BB08 /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5250EA1EC0D18C0026BB08 /* WeatherCell.swift */; };
-		5B5250ED1EC0D1B70026BB08 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5250EC1EC0D1B70026BB08 /* Weather.swift */; };
+		5B7BDA621EC4A02200852D8D /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7BDA611EC4A02200852D8D /* CurrentWeather.swift */; };
+		5BA84C8E1EC3721200FF0234 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA84C8D1EC3721200FF0234 /* Constants.swift */; };
 		5BB459881EBCD0C100BC1D83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB459871EBCD0C100BC1D83 /* AppDelegate.swift */; };
 		5BB4598A1EBCD0C100BC1D83 /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB459891EBCD0C100BC1D83 /* WeatherVC.swift */; };
 		5BB4598D1EBCD0C100BC1D83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BB4598B1EBCD0C100BC1D83 /* Main.storyboard */; };
@@ -20,7 +21,8 @@
 /* Begin PBXFileReference section */
 		2F6331B02EEC7ACA67737D48 /* Pods_RainyShinyCloudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RainyShinyCloudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B5250EA1EC0D18C0026BB08 /* WeatherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
-		5B5250EC1EC0D1B70026BB08 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		5B7BDA611EC4A02200852D8D /* CurrentWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
+		5BA84C8D1EC3721200FF0234 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5BB459841EBCD0C100BC1D83 /* RainyShinyCloudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RainyShinyCloudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB459871EBCD0C100BC1D83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BB459891EBCD0C100BC1D83 /* WeatherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
@@ -63,9 +65,17 @@
 		5B5250E91EC0D0F30026BB08 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5B5250EC1EC0D1B70026BB08 /* Weather.swift */,
+				5B7BDA611EC4A02200852D8D /* CurrentWeather.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		5BA84C8F1EC48B6B00FF0234 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5BA84C8D1EC3721200FF0234 /* Constants.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		5BB4597B1EBCD0C100BC1D83 = {
@@ -89,6 +99,7 @@
 		5BB459861EBCD0C100BC1D83 /* RainyShinyCloudy */ = {
 			isa = PBXGroup;
 			children = (
+				5BA84C8F1EC48B6B00FF0234 /* Utilities */,
 				5B5250E91EC0D0F30026BB08 /* Model */,
 				5B5250E81EC0D0EB0026BB08 /* View */,
 				5B5250E71EC0D0DD0026BB08 /* Controller */,
@@ -242,9 +253,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B5250ED1EC0D1B70026BB08 /* Weather.swift in Sources */,
+				5BA84C8E1EC3721200FF0234 /* Constants.swift in Sources */,
 				5BB4598A1EBCD0C100BC1D83 /* WeatherVC.swift in Sources */,
 				5BB459881EBCD0C100BC1D83 /* AppDelegate.swift in Sources */,
+				5B7BDA621EC4A02200852D8D /* CurrentWeather.swift in Sources */,
 				5B5250EB1EC0D18C0026BB08 /* WeatherCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

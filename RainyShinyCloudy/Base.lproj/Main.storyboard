@@ -92,21 +92,22 @@
                                                     <rect key="frame" x="28" y="6" width="327" height="55"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="U9g-dr-sX6">
-                                                            <rect key="frame" x="0.0" y="12" width="73.5" height="31"/>
+                                                            <rect key="frame" x="0.0" y="2.5" width="58" height="50"/>
                                                             <subviews>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Partially Cloudy Mini" translatesAutoresizingMaskIntoConstraints="NO" id="Tfy-ar-TSA">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="61.5" height="31"/>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Partially Cloudy" translatesAutoresizingMaskIntoConstraints="NO" id="Tfy-ar-TSA">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="50" id="Lfg-LQ-6He"/>
+                                                                        <constraint firstAttribute="height" constant="50" id="S2f-6d-xXb"/>
+                                                                    </constraints>
                                                                 </imageView>
                                                             </subviews>
-                                                            <constraints>
-                                                                <constraint firstAttribute="trailing" secondItem="Tfy-ar-TSA" secondAttribute="trailing" constant="12" id="Oys-qB-veB"/>
-                                                            </constraints>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="2nz-Fw-Rya">
-                                                            <rect key="frame" x="99.5" y="2" width="110.5" height="51"/>
+                                                            <rect key="frame" x="84" y="2" width="156" height="51"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tuesday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YmI-Ac-JHE">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="75.5" height="27.5"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tuesday 12:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="YmI-Ac-JHE">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="134.5" height="27.5"/>
                                                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
@@ -120,16 +121,16 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Jhf-dM-U8W">
-                                                            <rect key="frame" x="236" y="0.0" width="91" height="55"/>
+                                                            <rect key="frame" x="266" y="0.0" width="61" height="55"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15°C" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fZh-PM-wzb">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="91" height="27.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="61" height="27.5"/>
                                                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2°C" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yht-YN-z2Q">
-                                                                    <rect key="frame" x="0.0" y="27.5" width="91" height="27.5"/>
+                                                                    <rect key="frame" x="0.0" y="27.5" width="61" height="27.5"/>
                                                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
@@ -140,13 +141,19 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="hDt-1z-4P7" firstAttribute="centerY" secondItem="7DL-m6-nju" secondAttribute="centerY" id="6Ay-aJ-cR3"/>
-                                                <constraint firstItem="hDt-1z-4P7" firstAttribute="top" secondItem="7DL-m6-nju" secondAttribute="topMargin" constant="-2" id="FKN-ZG-QMF"/>
-                                                <constraint firstAttribute="trailing" secondItem="hDt-1z-4P7" secondAttribute="trailing" constant="20" id="U8B-kx-cWI"/>
-                                                <constraint firstItem="hDt-1z-4P7" firstAttribute="leading" secondItem="7DL-m6-nju" secondAttribute="leadingMargin" constant="20" id="fXt-Jc-y3a"/>
+                                                <constraint firstItem="hDt-1z-4P7" firstAttribute="leading" secondItem="7DL-m6-nju" secondAttribute="leadingMargin" constant="20" id="1EK-GZ-8xU"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="hDt-1z-4P7" secondAttribute="trailing" constant="12" id="H4T-wR-QTs"/>
+                                                <constraint firstItem="hDt-1z-4P7" firstAttribute="top" secondItem="7DL-m6-nju" secondAttribute="topMargin" constant="-2" id="XF0-8e-T9c"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="imgWeatherIcon" destination="Tfy-ar-TSA" id="N0F-ek-iG0"/>
+                                            <outlet property="lblDayOfWeek" destination="YmI-Ac-JHE" id="O3u-Ai-xGN"/>
+                                            <outlet property="lblMaxTemp" destination="fZh-PM-wzb" id="Qjx-q9-bcv"/>
+                                            <outlet property="lblMinTemp" destination="yht-YN-z2Q" id="R1T-4V-wZa"/>
+                                            <outlet property="lblWeatherType" destination="pnc-1a-vCe" id="oPQ-mu-eiA"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -179,6 +186,6 @@
     </scenes>
     <resources>
         <image name="Clear" width="107" height="107"/>
-        <image name="Partially Cloudy Mini" width="38" height="31"/>
+        <image name="Partially Cloudy" width="92" height="72"/>
     </resources>
 </document>

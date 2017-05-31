@@ -8,8 +8,9 @@
 
 import UIKit
 import Alamofire
+import CoreLocation
 
-class WeatherVC: UIViewController, UITableViewDataSource, UITableViewDelegate  {
+class WeatherVC: UIViewController, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate  {
 
     @IBOutlet weak var vwMainView: UIView!
     @IBOutlet weak var lblDate: UILabel!
@@ -18,6 +19,9 @@ class WeatherVC: UIViewController, UITableViewDataSource, UITableViewDelegate  {
     @IBOutlet weak var imgWeatherIcon: UIImageView!
     @IBOutlet weak var lblWeatherType: UILabel!
     @IBOutlet weak var tvTableView: UITableView!
+    
+    let locationManager = CLLocationManager()
+    var currentLocation: CLLocation!
     var currentWeather: CurrentWeather!
     var forecast: Forecast!
     var forecasts = [Forecast]()
@@ -27,20 +31,44 @@ class WeatherVC: UIViewController, UITableViewDataSource, UITableViewDelegate  {
         // Do any additional setup after loading the view, typically from a nib.
         tvTableView.delegate = self
         tvTableView.dataSource = self
-        print(CURRENT_WEATHER_URL)
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startMonitoringSignificantLocationChanges()
+        currentWeather = CurrentWeather()
         
     }
     
     
     override func viewDidAppear(_ animated: Bool) {
         //This is where we build our weather stuff
-        currentWeather = CurrentWeather()
-        currentWeather.downloadWeatherDetail {
-            self.downloadForecastData{
-            self.updateMainUI()
+        super.viewDidAppear(animated)
+        locationAuthStatus()
+        print(CURRENT_WEATHER_URL)
+        print(FORECAST_URL)
+        
+
+
+    }
+
+    func locationAuthStatus(){
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse{
+            currentLocation = locationManager.location
+            Location.sharedInstance.latitude = currentLocation.coordinate.latitude
+            Location.sharedInstance.longitude = currentLocation.coordinate.longitude
+            //Now we have our location, we can go an retrieve the 'today' detail
+            currentWeather.downloadWeatherDetail {
+                self.downloadForecastData{
+                self.updateMainUI()
             }
         }
+
+        } else{
+            locationManager.requestWhenInUseAuthorization()
+            locationAuthStatus()
+        }
     }
+
     
     func downloadForecastData(completed: @escaping DownloadComplete){
         let forecastURL = URL(string: FORECAST_URL)!
